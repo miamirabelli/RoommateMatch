@@ -15,6 +15,10 @@ def index():
 @app.route("/match")
 def parse_form():
     if request.method == "POST":
+        form_data = {field: request.form.get(field) for field in columns}
+        df_users.loc[len(df)] = form_data
+    
+
 
 
 
